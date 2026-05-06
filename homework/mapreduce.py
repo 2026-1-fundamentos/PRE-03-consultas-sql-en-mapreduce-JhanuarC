@@ -23,7 +23,8 @@ def hadoop(input_folder, output_folder, mapper_fn, reducer_fn):
 
     def create_output_directory(output_folder):
         if os.path.exists(output_folder):
-            raise FileExistsError(f"The folder '{output_folder}' already exists.")
+            pass
+            #raise FileExistsError(f"The folder '{output_folder}' already exists.") #Si la carpeta ya existe, no se sobreescribe, se deja tal cual. Si se quisiera sobreescribir, se podría eliminar la carpeta y crearla de nuevo.
         else:
             os.makedirs(output_folder)
 
